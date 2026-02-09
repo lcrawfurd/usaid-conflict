@@ -1,0 +1,6 @@
+.DS_Store
+.Rhistory
+*.html
+*_files/
+data/
+code/Archive/
