@@ -4,3 +4,4 @@
 *_files/
 data/
 code/Archive/
+*.qmd
