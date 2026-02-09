@@ -100,4 +100,4 @@ The US and other donors that followed suit should be aware: cutting aid doesn't 
 
 ---
 
-*Thanks to the authors of the original SSRN paper for making their methodology transparent enough to replicate and extend. Conflict data from [ACLED](https://acleddata.com/). Aid data from [GODAD](https://www.cesifo.org/en/publications/2025/working-paper/wedded-prosperity-informal-influence-and-regional-favoritism). Replication code is available [on GitHub](https://github.com/leecrawfurd/usaid-conflict). Any errors are my own.*
+*Thanks to the authors of the original SSRN paper for making their methodology transparent enough to replicate and extend. Conflict data from [ACLED](https://acleddata.com/). Aid data from [GODAD](https://www.cesifo.org/en/publications/2025/working-paper/wedded-prosperity-informal-influence-and-regional-favoritism). Replication code is available [on GitHub](https://github.com/lcrawfurd/usaid-conflict). Any errors are my own.*
