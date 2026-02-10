@@ -9,10 +9,14 @@ Requires: subnational_panel.dta
 clear all
 set more off
 
-global path "/Users/lee/Library/CloudStorage/Dropbox-CGDEducation/Lee Crawfurd/USAID Impacts/Input"
-global figures "/Users/lee/Library/CloudStorage/Dropbox-CGDEducation/Lee Crawfurd/blogs/2026-02-usaid-conflict/figures"
+// SET THIS TO YOUR PROJECT ROOT
+global root "/Users/lee/Library/CloudStorage/Dropbox-CGDEducation/Lee Crawfurd/USAID Impacts"
 
-use "$path/subnational_panel.dta", clear
+global input   "$root/Input"
+global output  "$root/Output"
+global figures "$root/Figures"
+
+use "$input/subnational_panel.dta", clear
 
 // Create IHS fatality variables
 gen ihs_fat_armed = asinh(fat_armed)

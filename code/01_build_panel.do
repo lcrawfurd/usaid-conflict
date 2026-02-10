@@ -7,15 +7,20 @@ Output: $output/acled_conflict_panel.dta
 clear all
 set more off
 
-global path "/Users/lee/Library/CloudStorage/Dropbox-CGDEducation/Lee Crawfurd/USAID Impacts/Input"
-global output "/Users/lee/Library/CloudStorage/Dropbox-CGDEducation/Lee Crawfurd/blogs/2026-02-usaid-conflict/data"
+// SET THIS TO YOUR PROJECT ROOT
+global root "/Users/lee/Library/CloudStorage/Dropbox-CGDEducation/Lee Crawfurd/USAID Impacts"
+
+global input   "$root/Input"
+global output  "$root/Output"
+global figures "$root/Figures"
 cap mkdir "$output"
+cap mkdir "$figures"
 
 // ============================================================
 // 1. ACLED Africa data
 // ============================================================
 
-import delimited "$path/Africa_ACLED.csv", clear varnames(1)
+import delimited "$input/Africa_ACLED.csv", clear varnames(1)
 
 // Parse date
 gen date = date(week, "YMD")
@@ -87,7 +92,7 @@ foreach v of varlist events_* fat_* {
 // ============================================================
 
 preserve
-	use "$path/Crawfurd_adm1.dta", clear
+	use "$input/Crawfurd_adm1.dta", clear
 
 	// Aggregate to country-year
 	collapse (sum) USA_disb, by(name_0 year)

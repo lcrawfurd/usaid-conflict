@@ -9,14 +9,17 @@ Requires: subnational_panel.dta, acled_conflict_panel.dta
 clear all
 set more off
 
-global path "/Users/lee/Library/CloudStorage/Dropbox-CGDEducation/Lee Crawfurd/USAID Impacts/Input"
-global output "/Users/lee/Library/CloudStorage/Dropbox-CGDEducation/Lee Crawfurd/blogs/2026-02-usaid-conflict/data"
-global figures "/Users/lee/Library/CloudStorage/Dropbox-CGDEducation/Lee Crawfurd/blogs/2026-02-usaid-conflict/figures"
+// SET THIS TO YOUR PROJECT ROOT
+global root "/Users/lee/Library/CloudStorage/Dropbox-CGDEducation/Lee Crawfurd/USAID Impacts"
+
+global input   "$root/Input"
+global output  "$root/Output"
+global figures "$root/Figures"
 
 // ============================================================
 // PART A: SUBNATIONAL SCATTERPLOTS
 // ============================================================
-use "$path/subnational_panel.dta", clear
+use "$input/subnational_panel.dta", clear
 
 // Pre-period: event_time -6 to -1
 preserve

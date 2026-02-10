@@ -8,8 +8,12 @@ Robustness: admin1 + country×month FE, and + admin1-specific trends.
 clear all
 set more off
 
-global path "/Users/lee/Library/CloudStorage/Dropbox-CGDEducation/Lee Crawfurd/USAID Impacts/Input"
-global output "/Users/lee/Library/CloudStorage/Dropbox-CGDEducation/Lee Crawfurd/blogs/2026-02-usaid-conflict/data"
+// SET THIS TO YOUR PROJECT ROOT
+global root "/Users/lee/Library/CloudStorage/Dropbox-CGDEducation/Lee Crawfurd/USAID Impacts"
+
+global input   "$root/Input"
+global output  "$root/Output"
+global figures "$root/Figures"
 
 di _newline "============================================"
 di "ALL DiD COEFFICIENTS"
@@ -42,7 +46,7 @@ di "IHS all fatalities:    coef = " %7.4f _b[post_treat] "  se = " %7.4f _se[pos
 // ============================================================
 // 2. SUBNATIONAL — TWFE (admin1 + month FE) [MAIN SPEC]
 // ============================================================
-use "$path/subnational_panel.dta", clear
+use "$input/subnational_panel.dta", clear
 gen ihs_fat_armed = asinh(fat_armed)
 gen ihs_fat_all = asinh(fat_all)
 

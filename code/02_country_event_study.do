@@ -8,8 +8,12 @@ Requires: $output/acled_conflict_panel.dta
 clear all
 set more off
 
-global output "/Users/lee/Library/CloudStorage/Dropbox-CGDEducation/Lee Crawfurd/blogs/2026-02-usaid-conflict/data"
-global figures "/Users/lee/Library/CloudStorage/Dropbox-CGDEducation/Lee Crawfurd/blogs/2026-02-usaid-conflict/figures"
+// SET THIS TO YOUR PROJECT ROOT
+global root "/Users/lee/Library/CloudStorage/Dropbox-CGDEducation/Lee Crawfurd/USAID Impacts"
+
+global input   "$root/Input"
+global output  "$root/Output"
+global figures "$root/Figures"
 
 use "$output/acled_conflict_panel.dta", clear
 keep if event_time >= -6 & event_time <= 12
